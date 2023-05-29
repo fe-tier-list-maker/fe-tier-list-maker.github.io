@@ -155,7 +155,7 @@
 		});
 
 		$(document).on("change", ".characterCheck", function() { // add/remove characters
-			changeCharacterCheckbox(this);
+			changeCharacterCheckbox(this, "jpg");
 		});
 		
 		$(document).on("dblclick", ".character", function() { // move to highest tier instantly
@@ -202,7 +202,7 @@
 		});
 
 		$(document).on("click", "#reset", function() {
-			changeGame(currentGameChars);
+			changeGame(gameAll);
 		});
 			
 		$(document).on("click", function(e) {
