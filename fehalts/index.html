@@ -1,8 +1,9 @@
 <!doctype html>
 <html>
+
 <head>
-	<meta charset="UTF-8"> 
-	<link rel="icon" type="image/x-icon" href= "../img/icon.png"/>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/x-icon" href="../img/icon.png" />
 	<title>Fire Emblem Heroes Alt Generator</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic" rel="stylesheet" type="text/css">
 	<link href="../styles/newstyle.css" rel="stylesheet">
@@ -11,76 +12,94 @@
 	<meta name="google-site-verification" content="mhlxk9_OOcyed8If_JjdkOZv6GmGPYfSnbsafwWmRC4" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:creator" content="@vernie_dk" />
-	<meta property="og:title" content="Fire Emblem Heroes Alt Generator"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://fe-tier-list-maker.github.io/fehalts"/>
-	<meta property="og:image" content="https://fe-tier-list-maker.github.io/img/preview_image.png"/>
-	<meta property="og:description" content="Everyone is here!"/>
+	<meta property="og:title" content="Fire Emblem Heroes Alt Generator" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://fe-tier-list-maker.github.io/fehalts" />
+	<meta property="og:image" content="https://fe-tier-list-maker.github.io/img/preview_image.png" />
+	<meta property="og:description" content="Everyone is here!" />
 	<meta name="keywords" content="Fire Emblem,Tier List,Three Houses,FE,Awakening,Fates,All Characters">
 	<!--<meta name="viewport" content="user-scalable=no"> !-->
 </head>
+
 <body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
 	<nav id="nav" class="nav">
 		<ul>
-			<li><button id="home"  onclick="location.href='https://fe-tier-list-maker.github.io/home';">Home</button></li>
+			<li><button id="home" onclick="location.href='https://fe-tier-list-maker.github.io/home';">Home</button>
+			</li>
 			<hr>
 			<li><button id="help">About</button></li>
 		</ul>
 	</nav>
-		<div class="nav-toggle">
-			<div class="nav-toggle-bar"></div>
-		</div>
+	<div class="nav-toggle">
+		<div class="nav-toggle-bar"></div>
+	</div>
 
 	<div class="main">
-	<h1>Fire Emblem Heroes Alt Generator</h1>
-	<br></br>
-	<p id="result">"Sample Text"</p>
-	<br>
-	<p style="text-align: center;">
-		<button id="generate">Make a new one!</button>
-		<span style="display:inline-block; width: 2em;"></span>
-		<button id="characters">Change characters</button>
-		<span style="display:inline-block; width: 2em;"></span>
-		<button id="settingsButton">Change settings</button>
-	</p>
+		<h1>Fire Emblem Heroes Alt Generator</h1>
+		<br></br>
+		<p id="result">"Sample Text"</p>
+		<br>
+		<p style="text-align: center;">
+			<button id="generate">Make a new one!</button>
+			<span style="display:inline-block; width: 2em;"></span>
+			<button id="characters">Change characters</button>
+			<span style="display:inline-block; width: 2em;"></span>
+			<button id="settingsButton">Change settings</button>
+		</p>
 	</div>
 	<div id="overlay">
 		<div id="modalWrapper">
 			<div id="charChange" class="popupMenu">
 				<h1>CHANGE CHARACTERS</h1>
 				<span id="close"></span>
-				<div id="checklist"><div></div></div>
+				<div id="checklist">
+					<div></div>
+				</div>
 				<p>Make sure to select at least one group for the generator to function properly.</p>
 			</div>
 
 			<div id="changeSettings" class="popupMenu">
 				<h1>SETTINGS</h1>
 				<span id="close"></span>
-				<div id="options"><div>
-					<div class="filterCheckWrap">Enable single characters: <input type="checkbox" id="single" class="filterCheck"></div>
-					<div class="filterCheckWrap">Enable duos: <input type="checkbox" id="duo" class="filterCheck"></div>
-					<div class="filterCheckWrap">Enable in-game seasons: <input type="checkbox" id="baseSeasons" class="filterCheck"></div>
-					<div class="filterCheckWrap">Enable other seasons: <input type="checkbox" id="seasonsOfLove" class="filterCheck"></div>
+				<div id="options">
+					<div>
+						<div class="filterCheckWrap">Enable single characters: <input type="checkbox" id="single"
+								class="filterCheck"></div>
+						<div class="filterCheckWrap">Enable duos: <input type="checkbox" id="duo" class="filterCheck">
+						</div>
+						<div class="filterCheckWrap">Enable in-game seasons: <input type="checkbox" id="baseSeasons"
+								class="filterCheck"></div>
+						<div class="filterCheckWrap">Enable other seasons: <input type="checkbox" id="seasonsOfLove"
+								class="filterCheck"></div>
+					</div>
+				</div>
+
+				<div id="helpMenu" class="popupMenu">
+					<h1>About</h1>
+					<span id="close"></span>
+					<p>Also check out the <a href="https://fe-tier-list-maker.github.io/home">other tools</a> on this
+						site!</p>
+					<p>Source code can be found <a
+							href="https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io">here</a> and was
+						forked from <a href="https://github.com/quetzle/smash-apps">here</a>.</p>
+					<p>Information on image ownership can be found <a
+							href="https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io/blob/master/CREDITS.md">here</a>.
+					</p>
+					<p>This tool was heavily inspired by the FE Hot Take Generator (link not available?).</p>
+					<p>Clicking the button gives you a new season / character pair. If you have any suggestions for
+						missing names, seasons, etc. message me on <a
+							href="https://bsky.app/profile/verniedk.bsky.social">Bluesky</a>
+						or elsewhere.</p>
 				</div>
 			</div>
-			
-			<div id="helpMenu" class="popupMenu">
-				<h1>About</h1>
-				<span id="close"></span>
-				<p>Also check out the <a href ="https://fe-tier-list-maker.github.io/home">other tools</a> on this site!</p>
-				<p>Source code can be found <a href ="https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io">here</a> and was forked from <a href ="https://github.com/quetzle/smash-apps">here</a>.</p>
-				<p>Information on image ownership can be found <a href = "https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io/blob/master/CREDITS.md">here</a>.</p>
-				<p>This tool was heavily inspired by the FE Hot Take Generator (link not available?).</p>
-				<p>Clicking the button gives you a new season / character pair. If you have any suggestions for missing names, seasons, etc. message me on <a href ="https://twitter.com/vernie_dk">Twitter</a> or elsewhere.</p>
-			</div>
 		</div>
-	</div>
 
-	<script src="../lib/common.js"></script>
-	<script src="../lib/allnames.js"></script>
-	<script src="fehroll.js"></script>
-	<script src="seasons.js"></script>
-	<script src="sentences.js"></script>
+		<script src="../lib/common.js"></script>
+		<script src="../lib/allnames.js"></script>
+		<script src="fehroll.js"></script>
+		<script src="seasons.js"></script>
+		<script src="sentences.js"></script>
 </body>
+
 </html>

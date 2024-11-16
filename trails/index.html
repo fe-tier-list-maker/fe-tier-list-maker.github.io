@@ -12,11 +12,11 @@
 	<meta name="google-site-verification" content="mhlxk9_OOcyed8If_JjdkOZv6GmGPYfSnbsafwWmRC4" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:creator" content="@vernie_dk" />
-	<meta property="og:title" content="Trails Tier List Maker"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://fe-tier-list-maker.github.io/trails"/>
-	<meta property="og:image" content="https://fe-tier-list-maker.github.io/trails/preview_image.png"/>
-	<meta property="og:description" content="That's love and peace, baby"/>
+	<meta property="og:title" content="Trails Tier List Maker" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://fe-tier-list-maker.github.io/trails" />
+	<meta property="og:image" content="https://fe-tier-list-maker.github.io/trails/preview_image.png" />
+	<meta property="og:description" content="That's love and peace, baby" />
 	<meta name="keywords" content="Trails,Kiseki,Tier List,Cold Steel,Crossbell,Sky,All Characters">
 	<meta name="viewport" content="user-scalable=no">
 </head>
@@ -46,8 +46,10 @@
 
 	<div id="tablewrap">
 		<div id="tablePlaceholder" style="height:500px"></div>
-		<table id="tablemain"><tbody>
-		</tbody></table>
+		<table id="tablemain">
+			<tbody>
+			</tbody>
+		</table>
 	</div>
 
 	<div id="tooltip">
@@ -121,7 +123,7 @@
 				<p>If you want to <strong>completely start over</strong>, refresh the page or click the "Reset" button
 					at the top of the page.</a>
 				<p>For any issues, add it to the list on the repository page or message me on <a
-						href="https://twitter.com/vernie_dk">Twitter</a> or elsewhere.</p>
+						href="https://bsky.app/profile/verniedk.bsky.social">Bluesky</a> or elsewhere.</p>
 			</div>
 			<div id="screenshotShow" class="popupMenu">
 				<h1>SAVE/LOAD</h1>
@@ -155,92 +157,92 @@
 		var tier = []; // format: [element, color id]
 		var tierlist = [];
 
-		$(document).on("click", ".nav-toggle", function() {
+		$(document).on("click", ".nav-toggle", function () {
 			toggleTooltip();
 		});
 
-		$(document).on("click", "#dock", function() {
+		$(document).on("click", "#dock", function () {
 			toggleTierListDock();
 		});
 
-		$(document).on("click", "#settings", function() {
+		$(document).on("click", "#settings", function () {
 			openTierSettings(this);
 		});
 
-		$(document).on("click", "#colorselect span", function() {
+		$(document).on("click", "#colorselect span", function () {
 			changeTierColour(this);
 		});
 
-		$(document).on("click", "#save", function() { // open save/load modal
+		$(document).on("click", "#save", function () { // open save/load modal
 			openScreenshotModal();
 		});
 
-		$(document).on("change", ".characterCheck", function() { // add/remove characters
+		$(document).on("change", ".characterCheck", function () { // add/remove characters
 			changeCharacterCheckbox(this);
 		});
-		
-		$(document).on("dblclick", ".character", function() { // move to highest tier instantly
+
+		$(document).on("dblclick", ".character", function () { // move to highest tier instantly
 			$(this).detach().appendTo('#rows');
 		});
 
-		$(document).on("click", "#hidebuttons", function() {
+		$(document).on("click", "#hidebuttons", function () {
 			toggleTierControls();
 		});
 
-		$(document).on("click", "#screenshot", function() {
+		$(document).on("click", "#screenshot", function () {
 			takeScreenshot();
 		});
 
-		$(document).on("click", "#clearRow", function() {
+		$(document).on("click", "#clearRow", function () {
 			clearTierRow();
 		});
 
-		$(document).on("click", "#deleteRow", function() {
+		$(document).on("click", "#deleteRow", function () {
 			deleteTierRow();
 			$("#overlay").css("opacity", 0);
 			$("#overlay").css("visibility", "hidden");
 			closePopups();
 		});
 
-		$(document).on("click", "#addRowUp", function() {
+		$(document).on("click", "#addRowUp", function () {
 			addTierRowAbove();
 		});
 
-		$(document).on("click", "#addRowBelow", function() {
+		$(document).on("click", "#addRowBelow", function () {
 			addTierRowBelow();
 		});
 
-		$(document).on("click", "#moveUp", function() {
+		$(document).on("click", "#moveUp", function () {
 			moveTierRowUp(this);
 		});
 
-		$(document).on("click", "#moveDown", function() {
+		$(document).on("click", "#moveDown", function () {
 			moveTierRowDown(this);
 		});
 
-		$(document).on("click", "#runCode", function() {
+		$(document).on("click", "#runCode", function () {
 			loadCode($("#exportcode").val(), gameFe);
 		});
 
-		$(document).on("click", "#reset", function() {
+		$(document).on("click", "#reset", function () {
 			changeGame(currentGameChars);
 		});
-			
-		$(document).on("click", function(e) {
+
+		$(document).on("click", function (e) {
 			clicked = e.target.id;
-			if(clicked == "overlay" || clicked == "modalWrapper" || clicked == "close") { // close modals
+			if (clicked == "overlay" || clicked == "modalWrapper" || clicked == "close") { // close modals
 				closePopups();
 				$("#screenshotShow").css("display", "none");
 				$("#overlay").css("opacity", 0);
 				$("#overlay").css("visibility", "hidden");
 			}
 		});
-		
-		$("#labelName").bind("input propertychange", function() {
+
+		$("#labelName").bind("input propertychange", function () {
 			changeTierLabelText();
 		});
-		
-		$("#resetLabel").on("click", function() {
+
+		$("#resetLabel").on("click", function () {
 			resetTierLabel();
 		});
 
@@ -250,7 +252,7 @@
 			$("h1 span").text(currentGame);
 		}
 
-		$(document).ready(function () {			
+		$(document).ready(function () {
 			initTable();
 			$("#char").html("<div></div>");
 			if (localStorage.getItem("ColorTiersCode") === null)
