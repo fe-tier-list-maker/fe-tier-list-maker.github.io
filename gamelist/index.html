@@ -1,25 +1,27 @@
 <!doctype html>
 <html>
+
 <head>
-	<meta charset="UTF-8"> 
-	<link rel="icon" type="image/x-icon" href= "../img/icon.png"/>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/x-icon" href="../img/icon.png" />
 	<title>Fire Emblem Game Tier List Maker</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic" rel="stylesheet" type="text/css">
 	<link href="../styles/newstyle.css" rel="stylesheet">
 	<link href="../styles/nav.css" rel="stylesheet">
-    <link href="../styles/dragula.min.css" rel="stylesheet">
-    <link href="gamestyle.css" rel="stylesheet">
+	<link href="../styles/dragula.min.css" rel="stylesheet">
+	<link href="gamestyle.css" rel="stylesheet">
 	<meta name="google-site-verification" content="mhlxk9_OOcyed8If_JjdkOZv6GmGPYfSnbsafwWmRC4" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:creator" content="@vernie_dk" />
-	<meta property="og:title" content="FE Tier List Maker"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://fe-tier-list-maker.github.io/gamelist"/>
-	<meta property="og:image" content="https://fe-tier-list-maker.github.io/img/preview_image.png"/>
-	<meta property="og:description" content="Everyone is here!"/>
+	<meta property="og:title" content="FE Tier List Maker" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://fe-tier-list-maker.github.io/gamelist" />
+	<meta property="og:image" content="https://fe-tier-list-maker.github.io/img/preview_image.png" />
+	<meta property="og:description" content="Everyone is here!" />
 	<meta name="keywords" content="Fire Emblem,Tier List,Engage,Three Houses,FE,Awakening,Fates,All Characters">
 	<meta name="viewport" content="user-scalable=no">
 </head>
+
 <body>
 	<nav id="nav" class="nav">
 		<ul>
@@ -39,7 +41,7 @@
 	<div id="controls">
 		<div class="nav-toggle">
 			<div class="nav-toggle-bar"></div>
-		</div>	
+		</div>
 		<h1 id="titleHeading"><span>neat</span> TIER LIST MAKER</h1>
 		<!--
 		<div id="buttons">
@@ -52,23 +54,32 @@
 		</div>
 		-->
 	</div>
-	
+
 	<div id="tablewrap">
 		<div id="tablePlaceholder" style="height:500px"></div>
-		<table id="tablemain"><tbody></tbody></table>
+		<table id="tablemain">
+			<tbody></tbody>
+		</table>
 	</div>
-	
+
 	<div id="char" class="sort">
 		<div>If no titles are loaded here, choose a game by clicking the "Change game" button above.</div>
 	</div>
-	
+
 	<div id="overlay">
 		<div id="modalWrapper">
 			<div id="modal" class="popupMenu">
 				<h1>SETTINGS</h1>
 				<span id="close"></span>
 				<p>Choose label color:</p>
-				<div id="colorselect"><span style="background:#FF7F7F"></span><span style="background:#FFBF7F"></span><span style="background:#FFDF7F"></span><span style="background:#FFFF7F"></span><span style="background:#BFFF7F"></span><span style="background:#7FFF7F"></span><span style="background:#7FFFFF"></span><span style="background:#7FBFFF"></span><span style="background:#7F7FFF"></span><span style="background:#FF7FFF"></span><span style="background:#BF7FBF"></span><span style="background:#3B3B3B"></span><span style="background:#858585"></span><span style="background:#CFCFCF"></span><span style="background:#F7F7F7"></span></div>
+				<div id="colorselect"><span style="background:#FF7F7F"></span><span
+						style="background:#FFBF7F"></span><span style="background:#FFDF7F"></span><span
+						style="background:#FFFF7F"></span><span style="background:#BFFF7F"></span><span
+						style="background:#7FFF7F"></span><span style="background:#7FFFFF"></span><span
+						style="background:#7FBFFF"></span><span style="background:#7F7FFF"></span><span
+						style="background:#FF7FFF"></span><span style="background:#BF7FBF"></span><span
+						style="background:#3B3B3B"></span><span style="background:#858585"></span><span
+						style="background:#CFCFCF"></span><span style="background:#F7F7F7"></span></div>
 				<p>Label name:</p><textarea id="labelName"></textarea></p>
 				<button id="resetLabel">Reset label</button>
 				<p>Row functions:</p>
@@ -78,38 +89,61 @@
 			<div id="charChange" class="popupMenu">
 				<h1>CHANGE CHARACTERS</h1>
 				<span id="close"></span>
-				<div id="checklist"><div></div></div>
-				<p><strong>Hiding a game will remove every character from that game from your tierlist!</strong> Do not click unless you are sure you want to change! You cannot undo this.</p>
+				<div id="checklist">
+					<div></div>
+				</div>
+				<p><strong>Hiding a game will remove every character from that game from your tierlist!</strong> Do not
+					click unless you are sure you want to change! You cannot undo this.</p>
 			</div>
 			<div id="helpMenu" class="popupMenu">
 				<h1>HELP</h1>
 				<span id="close"></span>
-				<p>Also check out the <a href ="https://fe-tier-list-maker.github.io/home">other tools</a>, including a Venn Diagram maker!</p>
-				<p>Source code can be found <a href ="https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io">here</a> and was forked from <a href ="https://github.com/quetzle/smash-apps">here</a>.</p>
-				<p>Information on image ownership can be found <a href = "https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io/blob/master/CREDITS.md">here</a>.</p>
-				<p>You can click and drag characters into the list or double-click to instantly move them to the highest tier.</p>
-				<p>Clicking on the "Dock tier list" button will <strong>stick the tier list to the top of the window.</strong>
-				This can be useful if you have a large number of characters on-screen and don't want to scroll up and down
-				as you drag them into your list. Clicking the button again will return the list to its original position.</p>
-				<p>You can take a screenshot or generate code to load your current list later in the "Save/Load" tab.</p>
-				<p>There is a gear next to each tier in the tierlist. If you click on it, you can <strong>change the color of the tier label, add rows, delete the row, or remove all of the characters currently in the row.</strong></p>
-				<p>Next to the gear are two arrows which will let you <strong>move a tier up and down a level</strong>.</p>
-				<p><strong>You can change the name of the tier</strong> by clicking on the tier label and typing in there. If this doesn't work, you can change or reset it in the tier's settings menu (the gear).</p>
-				<p>If you want to <strong>completely start over</strong>, refresh the page or click the "Reset" button at the top of the page.</a>
-				<p>For any issues, add it to the list on the repository page or message me on <a href ="https://twitter.com/vernie_dk">Twitter</a> or elsewhere.</p>
+				<p>Also check out the <a href="https://fe-tier-list-maker.github.io/home">other tools</a>, including a
+					Venn Diagram maker!</p>
+				<p>Source code can be found <a
+						href="https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io">here</a> and was
+					forked from <a href="https://github.com/quetzle/smash-apps">here</a>.</p>
+				<p>Information on image ownership can be found <a
+						href="https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io/blob/master/CREDITS.md">here</a>.
+				</p>
+				<p>You can click and drag characters into the list or double-click to instantly move them to the highest
+					tier.</p>
+				<p>Clicking on the "Dock tier list" button will <strong>stick the tier list to the top of the
+						window.</strong>
+					This can be useful if you have a large number of characters on-screen and don't want to scroll up
+					and down
+					as you drag them into your list. Clicking the button again will return the list to its original
+					position.</p>
+				<p>You can take a screenshot or generate code to load your current list later in the "Save/Load" tab.
+				</p>
+				<p>There is a gear next to each tier in the tierlist. If you click on it, you can <strong>change the
+						color of the tier label, add rows, delete the row, or remove all of the characters currently in
+						the row.</strong></p>
+				<p>Next to the gear are two arrows which will let you <strong>move a tier up and down a level</strong>.
+				</p>
+				<p><strong>You can change the name of the tier</strong> by clicking on the tier label and typing in
+					there. If this doesn't work, you can change or reset it in the tier's settings menu (the gear).</p>
+				<p>If you want to <strong>completely start over</strong>, refresh the page or click the "Reset" button
+					at the top of the page.</a>
+				<p>For any issues, add it to the list on the repository page or message me on <a
+						href="https://bsky.app/profile/verniedk.bsky.social">Bluesky</a> or elsewhere.</p>
 			</div>
 			<div id="screenshotShow" class="popupMenu">
 				<h1>SAVE/LOAD</h1>
 				<span id="close"></span>
-				<p style="text-align: left;">Your image will appear above after pressing "Take screenshot". You can copy or save this image.</p>
+				<p style="text-align: left;">Your image will appear above after pressing "Take screenshot". You can copy
+					or save this image.</p>
 				<div><button id="screenshot">Take screenshot</button></div>
-				<p style="text-align: left;">Alternatively, copy the code below to share an editable version of your tierlist. Paste a code into the box below and click "Run code" to load another tier list.</p>
-				<p style="text-align: left;">Note that any game that does not appear in the loaded list will be deselected.</p>
-				<textarea id="exportcode" rows="8"></textarea><div><button id="runCode">Run code</button></div>
+				<p style="text-align: left;">Alternatively, copy the code below to share an editable version of your
+					tierlist. Paste a code into the box below and click "Run code" to load another tier list.</p>
+				<p style="text-align: left;">Note that any game that does not appear in the loaded list will be
+					deselected.</p>
+				<textarea id="exportcode" rows="8"></textarea>
+				<div><button id="runCode">Run code</button></div>
 			</div>
 		</div>
 	</div>
-	
+
 	<script src="../lib/dragula.min.js"></script>
 	<script src="../lib/html2canvas.min.js"></script>
 	<script src="../lib/jquery.min.js"></script>
@@ -123,113 +157,113 @@
 		}).on("drop", function () {
 			localStorage.setItem("TierListMakerCode", toCode());
 		});
-		
-		var gameAll = [	["game", 0, ""],
-                ["all", 23, "Fire Emblem"],
-				["fan", 1, "Fan Games"],
-				["is", 3, "Intelligent Systems"],
-				["atlus", 2, "Atlus"],
-                ["other", 14, "Other"],
-                ];
+
+		var gameAll = [["game", 0, ""],
+		["all", 23, "Fire Emblem"],
+		["fan", 1, "Fan Games"],
+		["is", 3, "Intelligent Systems"],
+		["atlus", 2, "Atlus"],
+		["other", 14, "Other"],
+		];
 
 		var tier = []; // format: [element, color id]
 
-		$(document).on("click", ".nav-toggle", function() {
+		$(document).on("click", ".nav-toggle", function () {
 			toggleTooltip();
 		});
 
-		$(document).on("click", "#dock", function() {
+		$(document).on("click", "#dock", function () {
 			toggleTierListDock();
 		});
 
-		$(document).on("click", "#settings", function() {
+		$(document).on("click", "#settings", function () {
 			openTierSettings(this);
 		});
 
-		$(document).on("click", "#colorselect span", function() {
+		$(document).on("click", "#colorselect span", function () {
 			changeTierColour(this);
 		});
 
-		$(document).on("click", "#save", function() { // open save/load modal
+		$(document).on("click", "#save", function () { // open save/load modal
 			openScreenshotModal();
 		});
 
-		$(document).on("change", ".characterCheck", function() { // add/remove characters
+		$(document).on("change", ".characterCheck", function () { // add/remove characters
 			changeCharacterCheckbox(this, "jpg");
 		});
-		
-		$(document).on("dblclick", ".character", function() { // move to highest tier instantly
+
+		$(document).on("dblclick", ".character", function () { // move to highest tier instantly
 			$(this).detach().appendTo('#rows');
 		});
 
-		$(document).on("click", "#hidebuttons", function() {
+		$(document).on("click", "#hidebuttons", function () {
 			toggleTierControls();
 		});
 
-		$(document).on("click", "#screenshot", function() {
+		$(document).on("click", "#screenshot", function () {
 			takeScreenshot();
 		});
 
-		$(document).on("click", "#clearRow", function() {
+		$(document).on("click", "#clearRow", function () {
 			clearTierRow();
 		});
 
-		$(document).on("click", "#deleteRow", function() {
+		$(document).on("click", "#deleteRow", function () {
 			deleteTierRow();
 			$("#overlay").css("opacity", 0);
 			$("#overlay").css("visibility", "hidden");
 			closePopups();
 		});
 
-		$(document).on("click", "#addRowUp", function() {
+		$(document).on("click", "#addRowUp", function () {
 			addTierRowAbove();
 		});
 
-		$(document).on("click", "#addRowBelow", function() {
+		$(document).on("click", "#addRowBelow", function () {
 			addTierRowBelow();
 		});
 
-		$(document).on("click", "#moveUp", function() {
+		$(document).on("click", "#moveUp", function () {
 			moveTierRowUp(this);
 		});
 
-		$(document).on("click", "#moveDown", function() {
+		$(document).on("click", "#moveDown", function () {
 			moveTierRowDown(this);
 		});
 
-		$(document).on("click", "#runCode", function() {
+		$(document).on("click", "#runCode", function () {
 			loadCode($("#exportcode").val(), gameFe);
 		});
 
-		$(document).on("click", "#reset", function() {
+		$(document).on("click", "#reset", function () {
 			changeGame(gameAll);
 		});
-			
-		$(document).on("click", function(e) {
+
+		$(document).on("click", function (e) {
 			clicked = e.target.id;
-			if(clicked == "overlay" || clicked == "modalWrapper" || clicked == "close") { // close modals
+			if (clicked == "overlay" || clicked == "modalWrapper" || clicked == "close") { // close modals
 				closePopups();
 				$("#screenshotShow").css("display", "none");
 				$("#overlay").css("opacity", 0);
 				$("#overlay").css("visibility", "hidden");
 			}
 		});
-		
-		$("#labelName").bind("input propertychange", function() {
+
+		$("#labelName").bind("input propertychange", function () {
 			changeTierLabelText();
 		});
-		
-		$("#resetLabel").on("click", function() {
+
+		$("#resetLabel").on("click", function () {
 			resetTierLabel();
 		});
-		
+
 		function changeGame(game) {
 			buildCharacterLists(game);
-			$( ".selectAll" ).prop('checked', true).change();
+			$(".selectAll").prop('checked', true).change();
 			$("h1 span").text(currentGame);
 		}
-		
-		$(document).ready( function() {
+
+		$(document).ready(function () {
 			initTable();
 			$("#char").html("<div></div>");
 			if (localStorage.getItem("ColorTiersCode") === null)

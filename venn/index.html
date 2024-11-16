@@ -1,8 +1,9 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
-	<link rel="icon" type="image/x-icon" href= "../img/icon.png"/>
+	<link rel="icon" type="image/x-icon" href="../img/icon.png" />
 	<title>Fire Emblem Venn Diagram Maker</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic" rel="stylesheet" type="text/css">
 	<link href="../styles/newstyle.css" rel="stylesheet">
@@ -12,14 +13,15 @@
 	<meta name="google-site-verification" content="mhlxk9_OOcyed8If_JjdkOZv6GmGPYfSnbsafwWmRC4" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:creator" content="@vernie_dk" />
-	<meta property="og:title" content="FE Tier List Maker"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://fe-tier-list-maker.github.io/venn"/>
-	<meta property="og:image" content="https://fe-tier-list-maker.github.io/img/preview_image.png"/>
-	<meta property="og:description" content="Everyone is here!"/>
+	<meta property="og:title" content="FE Tier List Maker" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://fe-tier-list-maker.github.io/venn" />
+	<meta property="og:image" content="https://fe-tier-list-maker.github.io/img/preview_image.png" />
+	<meta property="og:description" content="Everyone is here!" />
 	<meta name="keywords" content="Fire Emblem,Tier List,Three Houses,FE,Awakening,Fates,All Characters">
 	<meta name="viewport" content="user-scalable=no">
 </head>
+
 <body>
 	<nav id="nav" class="nav">
 		<ul>
@@ -37,7 +39,7 @@
 	<div id="controls">
 		<div class="nav-toggle">
 			<div class="nav-toggle-bar"></div>
-		</div>	
+		</div>
 		<h1 id="titleHeading"><span>neat</span> DIAGRAM MAKER</h1>
 		<!--
 		<div id="buttons">
@@ -49,7 +51,7 @@
 		</div>
 		-->
 	</div>
-	
+
 	<div id="tablewrap">
 		<div class='labelHolder' id="leftHolder">
 			<div class='handle'></div>
@@ -57,7 +59,7 @@
 		</div>
 		<div class='labelHolder' id="midHolder">
 			<div class='handle'></div>
-			<span class='label' contenteditable='true' >Middle</span>
+			<span class='label' contenteditable='true'>Middle</span>
 		</div>
 		<div class='labelHolder' id="rightHolder">
 			<div class='handle'></div>
@@ -65,11 +67,11 @@
 		</div>
 		<div id="tablemain"></div>
 	</div>
-	
+
 	<div id="char" class="sort">
 		<div>If no characters are loaded here, choose a game by clicking the "Change game" button above.</div>
 	</div>
-	
+
 	<div id="overlay" data-html2canvas-ignore="true">
 		<div id="modalWrapper">
 			<div id="modal" class="popupMenu">
@@ -83,24 +85,42 @@
 					</div>
 				</div>
 				<p>Choose background color:</p>
-				<div id="colorselect"><span style="background:#FF7F7F"></span><span style="background:#FFBF7F"></span><span style="background:#FFDF7F"></span><span style="background:#FFFF7F"></span><span style="background:#BFFF7F"></span><span style="background:#7FFF7F"></span><span style="background:#7FFFFF"></span><span style="background:#7FBFFF"></span><span style="background:#7F7FFF"></span><span style="background:#FF7FFF"></span><span style="background:#BF7FBF"></span><span style="background:#1A1A1A"></span><span style="background:#858585"></span><span style="background:#CFCFCF"></span><span style="background:#FFFFFF"></span></div>
+				<div id="colorselect"><span style="background:#FF7F7F"></span><span
+						style="background:#FFBF7F"></span><span style="background:#FFDF7F"></span><span
+						style="background:#FFFF7F"></span><span style="background:#BFFF7F"></span><span
+						style="background:#7FFF7F"></span><span style="background:#7FFFFF"></span><span
+						style="background:#7FBFFF"></span><span style="background:#7F7FFF"></span><span
+						style="background:#FF7FFF"></span><span style="background:#BF7FBF"></span><span
+						style="background:#1A1A1A"></span><span style="background:#858585"></span><span
+						style="background:#CFCFCF"></span><span style="background:#FFFFFF"></span></div>
 			</div>
 			<div id="charChange" class="popupMenu">
 				<h1>CHANGE CHARACTERS</h1>
 				<span id="close"></span>
-				<div id="checklist"><div></div></div>
-				<p><strong>Hiding a game will remove every character from that game from your tierlist!</strong> Do not click unless you are sure you want to change! You cannot undo this.</p>
+				<div id="checklist">
+					<div></div>
+				</div>
+				<p><strong>Hiding a game will remove every character from that game from your tierlist!</strong> Do not
+					click unless you are sure you want to change! You cannot undo this.</p>
 			</div>
 			<div id="helpMenu" class="popupMenu">
 				<h1>HELP</h1>
 				<span id="close"></span>
-				<p>Also check out the <a href ="https://fe-tier-list-maker.github.io/home">other tools</a> on this site!</p>
-				<p>Source code can be found <a href ="https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io">here</a> and was forked from <a href ="https://github.com/quetzle/smash-apps">here</a>.</p>
-				<p>Information on image ownership can be found <a href = "https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io/blob/master/CREDITS.md">here</a>.</p>
-				<p>You can click and drag characters into the diagram. Dragging from the left of a label will allow you to move it.</p>
+				<p>Also check out the <a href="https://fe-tier-list-maker.github.io/home">other tools</a> on this site!
+				</p>
+				<p>Source code can be found <a
+						href="https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io">here</a> and was
+					forked from <a href="https://github.com/quetzle/smash-apps">here</a>.</p>
+				<p>Information on image ownership can be found <a
+						href="https://github.com/fe-tier-list-maker/fe-tier-list-maker.github.io/blob/master/CREDITS.md">here</a>.
+				</p>
+				<p>You can click and drag characters into the diagram. Dragging from the left of a label will allow you
+					to move it.</p>
 				<p>You can <strong>change the size and colour</strong> of the diagram in the Options menu.</p>
-				<p>If you want to <strong>completely start over</strong>, refresh the page or click the "Reset" button at the top of the page.</a>
-				<p>For any issues, add it to the list on the repository page or message me on <a href ="https://twitter.com/vernie_dk">Twitter</a> or elsewhere.</p>
+				<p>If you want to <strong>completely start over</strong>, refresh the page or click the "Reset" button
+					at the top of the page.</a>
+				<p>For any issues, add it to the list on the repository page or message me on <a
+						href="https://bsky.app/profile/verniedk.bsky.social">Bluesky</a> or elsewhere.</p>
 			</div>
 			<div id="screenshotShow" class="popupMenu">
 				<h1>SCREENSHOT</h1>
@@ -115,61 +135,61 @@
 	<script src="../lib/common.js"></script>
 	<script src="../lib/toolcommon.js"></script>
 	<script>
-		$(document).on("click", "#options", function() { // open options modal
+		$(document).on("click", "#options", function () { // open options modal
 			currentColor = $("#tablewrap").css("background-color");
 			colorIndex = colors.indexOf(rgb2hex(currentColor).toUpperCase());
 			for (var i = 0; i < $("#colorselect span").length; i++) {
-				$("#colorselect span:nth-of-type("+(i+1)+")").attr("class","nope");
+				$("#colorselect span:nth-of-type(" + (i + 1) + ")").attr("class", "nope");
 			}
-			$("#colorselect span:nth-of-type("+(colorIndex+1)+")").attr("class","selected");
+			$("#colorselect span:nth-of-type(" + (colorIndex + 1) + ")").attr("class", "selected");
 			openPopup("#modal");
 		});
-		
-		$(document).on("dragStart", '.character', function() { // attach to diagram
+
+		$(document).on("dragStart", '.character', function () { // attach to diagram
 			// $(this).detach().appendTo('#tablewrap');
 			// $(this).css("position", "absolute");
 		});
-			
-		$(document).on("click", function(e) {
+
+		$(document).on("click", function (e) {
 			clicked = e.target.id;
-			if(clicked == "overlay" || clicked == "modalWrapper" || clicked == "close") { // close modals
+			if (clicked == "overlay" || clicked == "modalWrapper" || clicked == "close") { // close modals
 				closePopups();
 				$("#screenshotShow").css("display", "none");
 				$("#overlay").css("opacity", 0);
 				$("#overlay").css("visibility", "hidden");
-			} else if(clicked == "screenshot") { // take a screenshot
+			} else if (clicked == "screenshot") { // take a screenshot
 				closePopups();
-				$("#screenshotShow").css("display","block");
+				$("#screenshotShow").css("display", "block");
 				$("#overlay").css("opacity", 1);
 				$("#overlay").css("visibility", "visible");
-				window.scrollTo(0,0);
+				window.scrollTo(0, 0);
 				html2canvas(document.body, {
 					width: $("#tablemain").width(),
 					height: $("#tablemain").height(),
 					x: Math.round($("#tablemain").offset().left),
 					y: Math.round($("#tablemain").offset().top),
-				}).then(function(canvas) {
+				}).then(function (canvas) {
 					$("#screenshotShow span").after(canvas);
 					$("#screenshotShow canvas").css("max-width", "70%");
 					$("#screenshotShow canvas").css("height", "auto");
-					$("#screenshotShow").css("top",alignPopup($("#screenshotShow")));
+					$("#screenshotShow").css("top", alignPopup($("#screenshotShow")));
 				});
 			} else if (clicked == "reset") {
 				for (var i = 0; i < $(".labelHolder").length; i++) {
-					$(".labelHolder:nth-of-type("+(i+1)+")").removeAttr('style');
-					$(".labelHolder:nth-of-type("+(i+1)+") .label").html("New");
+					$(".labelHolder:nth-of-type(" + (i + 1) + ")").removeAttr('style');
+					$(".labelHolder:nth-of-type(" + (i + 1) + ") .label").html("New");
 				}
 				changeGame(currentGameChars);
-			} 
+			}
 		});
 
-		$(document).on("input", "#sizeSlider", function() {
+		$(document).on("input", "#sizeSlider", function () {
 			$("#currSize").html($(this).val() + "%");
 			$("#tablemain").css("width", ($(this).val() / 100) * 88 + "vw");
 			$("#tablemain").css("height", ($(this).val() / 100) * 66 + "vw");
 		});
-		
-		$(document).ready( function() {
+
+		$(document).ready(function () {
 			$("#char").html("<div></div>");
 			changeGame(gameFe);
 			$("#sizeSlider").val(100);
