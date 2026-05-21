@@ -6,6 +6,7 @@
 	<link rel="icon" type="image/x-icon" href="img/icon.png" />
 	<title>Fire Emblem Tier List Maker</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic" rel="stylesheet" type="text/css">
+	<!-- link href="styles/bootstrap.min.css" rel="stylesheet" -->
 	<link href="styles/newstyle.css" rel="stylesheet">
 	<link href="styles/nav.css" rel="stylesheet">
 	<link href="styles/dragula.min.css" rel="stylesheet">
@@ -57,7 +58,7 @@
 		</table>
 	</div>
 
-	<div id="tooltip">
+	<div id="list-tip">
 		<p>PRO TIP: Click the top left button to show more characters!</p>
 	</div>
 
@@ -151,10 +152,11 @@
 			</div>
 		</div>
 	</div>
-	<!--<script src="allnames.js"></script>-->
 	<script src="lib/dragula.min.js"></script>
 	<script src="lib/html2canvas.min.js"></script>
 	<script src="lib/jquery.min.js"></script>
+	<!--script src="lib/bootstrap.min.js"></script-->
+	<!--script src="lib/allnames.js"></script-->
 	<script src="lib/common.js"></script>
 	<script src="lib/tables.js"></script>
 	<script src="lib/tags.js"></script>
@@ -171,7 +173,7 @@
 		var tierlist = [];
 
 		$(document).on("click", ".nav-toggle", function () {
-			toggleTooltip();
+			toggleTips();
 		});
 
 		$(document).on("click", "#dock", function () {
