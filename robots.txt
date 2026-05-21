@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /img/
+Disallow: /gamelist/img/
+Disallow: /trails/img/
+Disallow: /lib/
+License: https://fe-tier-list-maker.github.io/license.xml
